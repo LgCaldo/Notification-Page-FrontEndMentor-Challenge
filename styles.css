@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: "Plus Jakarta Sans";
+  /* background-color: lightseagreen; */
+}
+
+.main {
+  padding: 1.5rem 1rem;
+}
+
+.notifications {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  & .title {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    font-size: 1.25rem;
+    word-spacing: 9px;
+  }
+
+  & .number {
+    background-color: var(--Blue);
+    color: var(--White);
+    width: 32px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  & .mark {
+    color: var(--Dark-grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+}
+
+.post {
+  background-color: var(--Very-light-grayish-blue);
+  min-width: 345px;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  gap: 13px;
+  position: relative;
+  font-size: 0.875rem;
+  cursor: pointer;
+  color: var(--Dark-grayish-blue);
+
+  & .image {
+    width: 40px;
+    height: 40px;
+  }
+
+  & .picture {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 1rem;
+  }
+
+  & .name {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+
+  & .reaction {
+    font-weight: 800;
+    &:hover {
+      color: var(--Blue);
+    }
+  }
+
+  & .time {
+    color: var(--Grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  & .group {
+    color: var(--Blue);
+    font-weight: 800;
+  }
+
+  & .message {
+    margin-top: 0.75rem;
+    padding: 0.875rem;
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 6px;
+    &:hover {
+      background-color: var(--Light-grayish-blue-1);
+    }
+  }
+}
+
+.not-read {
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--Red);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 730px;
+    margin: 0 auto;
+  }
+
+  .post{
+    font-size: 1rem;
+  }
+}
